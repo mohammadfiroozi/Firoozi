@@ -13,3 +13,18 @@ D:\FRZ Porject\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.pdb
 D:\FRZ Porject\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.Migrations.Firoozi1.resources
 D:\FRZ Porject\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.csproj.GenerateResource.Cache
 D:\FRZ Porject\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.Migrations.Firoozi2.resources
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\bin\Debug\Firoozi.Repository.dll.config
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\bin\Debug\Firoozi.Repository.dll
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\bin\Debug\Firoozi.Repository.pdb
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\bin\Debug\EntityFramework.dll
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\bin\Debug\Firoozi.Domain.dll
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\bin\Debug\Firoozi.Domain.pdb
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\bin\Debug\EntityFramework.xml
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.csprojResolveAssemblyReference.cache
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.Migrations.Firoozi1.resources
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.Migrations.Firoozi2.resources
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.csproj.GenerateResource.Cache
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.dll
+D:\FRZ Porject\Firoozi Git\Firoozi\Firoozi.Repository\obj\Debug\Firoozi.Repository.pdb
