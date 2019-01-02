@@ -1,0 +1,5 @@
+D:\FRZ Porject\Firoozi\Firoozi.Domain\bin\Debug\Firoozi.Domain.dll
+D:\FRZ Porject\Firoozi\Firoozi.Domain\bin\Debug\Firoozi.Domain.pdb
+D:\FRZ Porject\Firoozi\Firoozi.Domain\obj\Debug\Firoozi.Domain.dll
+D:\FRZ Porject\Firoozi\Firoozi.Domain\obj\Debug\Firoozi.Domain.pdb
+D:\FRZ Porject\Firoozi\Firoozi.Domain\obj\Debug\Firoozi.Domain.csprojResolveAssemblyReference.cache
