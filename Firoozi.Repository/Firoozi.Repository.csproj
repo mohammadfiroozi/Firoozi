@@ -62,6 +62,9 @@
     <Compile Include="Data\Migrations\201812250648579_Firoozi-2.Designer.cs">
       <DependentUpon>201812250648579_Firoozi-2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\Repository\ICountryRepository.cs" />
+    <Compile Include="Data\Repository\IRepository.cs" />
+    <Compile Include="Data\Repository\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,7 +78,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\Repository\" />
+    <Folder Include="Extentions\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Data\Migrations\201812250647287_Firoozi-1.resx">
