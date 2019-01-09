@@ -1,4 +1,7 @@
-﻿public interface IEntity<T>
+﻿namespace Firoozi.Domain
 {
-    T Id { get; set; }
+    public interface IEntity<T>
+    {
+        T Id { get; set; }
+    }
 }

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Firoozi.Domain
+﻿namespace Firoozi.Domain
 {
+    using System;
     public abstract class AuditableEntity : IAuditableEntity
     {
         public DateTime? CreatedDate { get; set; }

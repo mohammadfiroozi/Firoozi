@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,13 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuditableEntity.cs" />
-    <Compile Include="BaseEntity.cs" />
     <Compile Include="BasicInfo\City.cs" />
     <Compile Include="BasicInfo\Country.cs" />
     <Compile Include="BasicInfo\Province.cs" />
+    <Compile Include="ComplexTypes\GeographicalLocation.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="IAuditableEntity.cs" />
+    <Compile Include="IHaveDescription.cs" />
     <Compile Include="IEntity.cs" />
+    <Compile Include="IHaveCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

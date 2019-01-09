@@ -1,5 +1,4 @@
 ﻿using Firoozi.Domain;
-using Firoozi.Domain.BasicInfo;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Firoozi.Repository.Data.EntityMappings

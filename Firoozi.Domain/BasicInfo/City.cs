@@ -1,16 +1,17 @@
-﻿namespace Firoozi.Domain.BasicInfo
+﻿namespace Firoozi.Domain
 {
-    public class City : Entity<int>
-    {
-        
-        public string Name { get; set; }
-        public float Latiude { get; set; }
-        public float longitude { get; set; }
-        public int Province_Id { get; set; }
-        #region Navigations
-        public virtual Province Province { get; set; }
-        #endregion
+    using Firoozi.Domain.ComplexTypes;
 
+    public class City : Entity, IHaveCode
+    {
+
+        public string Name { get; set; }
+        public string Code { get; set; }
+        public int Province_Id { get; set; }
+        public GeographicalLocation GeographicalLocation { get; set; }
+        #region Navigations
+        public Province Province { get; set; }
+        #endregion
     }
 
 }
