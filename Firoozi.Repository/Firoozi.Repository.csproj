@@ -64,6 +64,10 @@
     </Compile>
     <Compile Include="Data\Repository\IRepository.cs" />
     <Compile Include="Data\Repository\Repository.cs" />
+    <Compile Include="Migrations\201901091907331_mari.cs" />
+    <Compile Include="Migrations\201901091907331_mari.Designer.cs">
+      <DependentUpon>201901091907331_mari.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Migrations\201812250648579_Firoozi-2.resx">
       <DependentUpon>201812250648579_Firoozi-2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901091907331_mari.resx">
+      <DependentUpon>201901091907331_mari.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

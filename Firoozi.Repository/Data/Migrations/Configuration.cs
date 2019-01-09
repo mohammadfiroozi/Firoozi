@@ -9,7 +9,7 @@ namespace Firoozi.Repository.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Firoozi.Repository.Data.FirooziDbContext context)
