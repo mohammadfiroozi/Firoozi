@@ -1,25 +1,19 @@
-﻿using System.Collections.Generic;
-
-namespace Firoozi.Domain.BasicInfo
+﻿namespace Firoozi.Domain
 {
-    public class Province : Entity<int>
+    using Firoozi.Domain.ComplexTypes;
+    using System.Collections.Generic;
+
+    public class Province : Entity, IHaveCode
     {
-      
+
         public string Name { get; set; }
-        public int PhoneCode { get; set; }
-        public float latitude { get; set; }
-        public float longitude { get; set; }
+        public string Code { get; set; }
+        public GeographicalLocation GeographicalLocation { get; set; }
         public int Country_Id { get; set; }
         #region Navigations
-        public virtual Country Country { get; set; }
-        public ICollection<City> Cities { get; set; }
+        public Country Country { get; set; }
+        public ICollection<City> Cities { get; set; } = new HashSet<City>();
         #endregion
-
-        public Province()
-        {
-            Cities = new List<City>();
-        }
-
     }
 
 }

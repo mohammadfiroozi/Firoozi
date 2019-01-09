@@ -9,6 +9,13 @@ namespace Firoozi.Repository.Data.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
+        /// protected readonly FirooziDbContext _context;
+        /// Bad Code smell
+        /// your repository tight coupled to entity framework DbContext
+        /// -------------------------------------------------------------------
+        /// pagination not implemented
+        /// query not implemented for get and get all
+        /// disposing not implemented
         protected readonly FirooziDbContext _context;
        public Repository(FirooziDbContext context)
         {

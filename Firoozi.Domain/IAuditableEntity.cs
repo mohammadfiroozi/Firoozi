@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Firoozi.Domain
+﻿namespace Firoozi.Domain
 {
+    using System;
+
     public interface IAuditableEntity
     {
         DateTime? CreatedDate { get; set; }

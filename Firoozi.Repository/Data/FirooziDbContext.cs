@@ -1,5 +1,5 @@
-﻿using Firoozi.Domain.BasicInfo;
-using Firoozi.Repository.Data.EntityMappings.BaseInfo;
+﻿using Firoozi.Domain;
+using Firoozi.Repository.Data.EntityMappings;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

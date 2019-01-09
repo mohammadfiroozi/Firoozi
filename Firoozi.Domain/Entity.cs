@@ -1,4 +1,12 @@
-﻿public abstract class Entity<T> : BaseEntity, IEntity<T>
+﻿namespace Firoozi.Domain
 {
-    public virtual T Id { get; set; }
+    /// <summary>
+    /// Entity <<<< Entity<int>
+    /// </summary>
+    public class Entity : Entity<int> { }
+
+    public abstract class Entity<T> : IEntity<T>
+    {
+        public virtual T Id { get; set; }
+    }
 }
