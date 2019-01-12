@@ -7,9 +7,9 @@
         {
             
             Property(c => c.Name).IsRequired().HasMaxLength(50);
-            Property(c => c.GeographicalLocation.Longitude).IsOptional();
-            Property(c => c.GeographicalLocation.Latiude).IsOptional();
-
+            Property(c => c.GeographicalLocation.Longitude).IsOptional().HasColumnName("Longitude");
+            Property(c => c.GeographicalLocation.Latiude).IsOptional().HasColumnName("Latiude");
+       
             //HasOptional(m => m.Province).WithMany().HasForeignKey(m => m.Province_Id);
 
         }
