@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201901091907331_mari.Designer.cs">
       <DependentUpon>201901091907331_mari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901122139287_setare.cs" />
+    <Compile Include="Migrations\201901122139287_setare.Designer.cs">
+      <DependentUpon>201901122139287_setare.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901091907331_mari.resx">
       <DependentUpon>201901091907331_mari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901122139287_setare.resx">
+      <DependentUpon>201901122139287_setare.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

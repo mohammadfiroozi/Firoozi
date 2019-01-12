@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -11,15 +13,19 @@ namespace Firoozi.Repository.Data.Repository
     {
         
         protected readonly FirooziDbContext _context;
+        internal DbSet<TEntity> _dbSet;
+      
 
-
-       public Repository(FirooziDbContext context)
+        public Repository(FirooziDbContext context)
         {
             _context = context;
+            _dbSet = _context.Set<TEntity>();
+
+
         }
         public void Add(TEntity entity)
         {
-            _context.Set<TEntity>().Add(entity);
+            _dbSet.Add(entity);
         }
 
         public Task AddAsync(TEntity entity)
@@ -39,12 +45,12 @@ namespace Firoozi.Repository.Data.Repository
 
         public void AddRange(IEnumerable<TEntity> entities)
         {
-            _context.Set<TEntity>().AddRange(entities);
+            _dbSet.AddRange(entities);
         }
 
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            return _context.Set<TEntity>().Where(predicate);
+            return _dbSet.Where(predicate);
         }
 
         public TEntity FirstOrDefault(TKey id)
@@ -69,7 +75,7 @@ namespace Firoozi.Repository.Data.Repository
 
         public TEntity Get(TKey id)
         {
-            return _context.Set<TEntity>().Find(id);
+            return _dbSet.Find(id);
         }
 
         public IQueryable<TEntity> GetAll()
@@ -77,16 +83,7 @@ namespace Firoozi.Repository.Data.Repository
             return _context.Set<TEntity>();
         }
 
-        public List<TEntity> GetAllList(Expression<Func<TEntity, bool>> predicate)
-        {
-            return _context.Set<TEntity>().ToList();
-        }
-
-        public Task<List<TEntity>> GetAllListAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return Task.FromResult(_context.Set<TEntity>().ToList());
-        }
-
+        
         public virtual async Task<TEntity> GetAsync(TKey id)
         {
             return await FirstOrDefaultAsync(id);
@@ -95,7 +92,7 @@ namespace Firoozi.Repository.Data.Repository
 
         public void Remove(TEntity entity)
         {
-            _context.Set<TEntity>().Remove(entity);
+            _dbSet.Remove(entity);
         }
 
         public Task RemoveAsync(TEntity entity)
@@ -105,7 +102,7 @@ namespace Firoozi.Repository.Data.Repository
 
         public void RemoveRange(IEnumerable<TEntity> entities)
         {
-            _context.Set<TEntity>().RemoveRange(entities);
+            _dbSet.RemoveRange(entities);
         }
 
         public Task RemoveRangeAsync(IEnumerable<TEntity> entities)
@@ -133,6 +130,40 @@ namespace Firoozi.Repository.Data.Repository
                 );
 
             return Expression.Lambda<Func<TEntity, bool>>(lambdaBody, lambdaParam);
+        }
+
+        public IEnumerable<TEntity> GetAllList(int? skip = null, int? take = null,Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            IQueryable<TEntity> query = _dbSet;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            foreach (var includeProperty in includeProperties)
+            {
+                query = query.Include(includeProperty);
+            }
+
+            if (orderBy != null)
+            {
+                return orderBy(query).ToList();
+            }
+
+            if (skip !=null && take!=null)
+            {
+                return query.Skip((skip.Value - 1) * take.Value).Take(take.Value).ToList();
+            }
+            else
+            {
+                return query.ToList();
+            }
+        }
+
+        public Task<IEnumerable<TEntity>> GetAllListAsync(int? skip = null, int? take = null, Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            throw new NotImplementedException();
         }
     }
 }
